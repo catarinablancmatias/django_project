@@ -1,7 +1,8 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
 from django.http import HttpResponse
+from django.db.models import Q
 from django.views.generic import(
 	ListView,
 	DetailView,
@@ -14,12 +15,28 @@ from .models import Post
 
 def home(request):
 	context = {
-		'posts': Post.objects.all()
+		'posts': Post.objects.all(),
 	}
+
 	return render(request, 'blog/home.html', context)
 
 def post_detail(request):
 	return HttpResponse()
+
+
+def search(request):
+	queryset = Post.objects.all()
+	query = request.GET.get('q')
+	if query:
+		queryset = queryset.filter(
+				Q(title__icontains=query) | 
+				Q(content__icontains=query)
+			).distinct()
+	context = {
+		'queryset': queryset
+	}
+	return render(request, 'blog/search_results.html', context)	
+
 
 
 class PostListView(ListView):
@@ -27,13 +44,14 @@ class PostListView(ListView):
 	template_name = 'blog/home.html'
 	context_object_name = 'posts'
 	ordering = ['-date_posted']
-	paginate_by = 5
+	paginate_by = 4
+
 
 class UserPostListView(ListView):
 	model = Post
 	template_name = 'blog/user_posts.html'
 	context_object_name = 'posts'
-	paginate_by = 5
+	paginate_by = 4
 
 	def get_queryset(self):
 		user = get_object_or_404(User, username=self.kwargs.get('username'))
@@ -97,4 +115,4 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 
 def about(request):
-	return render(request, 'blog/about.html', {'title': 'Sobre'})	
+	return render(request, 'blog/about.html', {'title': 'Sobre'})
