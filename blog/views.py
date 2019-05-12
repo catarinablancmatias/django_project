@@ -20,9 +20,6 @@ def home(request):
 
 	return render(request, 'blog/home.html', context)
 
-def post_detail(request):
-	return HttpResponse()
-
 
 def search(request):
 	queryset = Post.objects.all()
@@ -81,16 +78,6 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
 	model = Post
 	fields = ['title', 'content', 'image']
-
-	def PostUpdateView(request):
-		if request.method == 'POST':
-			form=PostUpdateView(request.POST)
-			if form.is_valid():
-				form.save()
-		else:
-			form=PostUpdateView
-
-		return render(request, 'blog/post_detail.html', context)
 
 	def form_valid(self, form):
 		form.instance.author = self.request.user
