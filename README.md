@@ -1,12 +1,12 @@
 ===================================
-Django Blog Na minha cozinha |latest-version|
+Django Blog Na minha cozinha |Última versão|
 ===================================
 
 Um blog simples e intuitivo, permitindo a inscrição de utilizadores e que cada inscrito possa partilhar a sua receita adicionando uma foto.
 Podem ainda pesquisar por qualquer palavra que pretendam e todos os conteúdos no blog com essa chave vão aparecer.
 
 
-Features
+Funcionalidades
 ========
 
 Lista de funcionalidades importantes:
@@ -21,7 +21,7 @@ Lista de funcionalidades importantes:
 * `Django-CMS`_ plugins
 * Utilização de base de dados
 
-Online resources
+Recursos online
 ================
 
 Mais informações e ajuda nestes links:
