@@ -1,5 +1,3 @@
-# django_project
-
 ===================================
 Django Blog Na minha cozinha |latest-version|
 ===================================
@@ -11,7 +9,7 @@ Podem ainda pesquisar por qualquer palavra que pretendam e todos os conteúdos n
 Features
 ========
 
-Lista de funcionalidades importantes
+Lista de funcionalidades importantes:
 
 * Ferramenta de pesquisa avançada
 * Inscrição de utilizador
@@ -26,7 +24,7 @@ Lista de funcionalidades importantes
 Online resources
 ================
 
-More information and help available at these URLs:
+Mais informações e ajuda nestes links:
 
-* `Code repository`
-* Para reportar um bug: Email: Naminhacozinha@gmail.com
+* Repositório de Código: https://github.com/catarinablancmatias/django_project/tree/master/blog
+* Para reportar um bug ou fazer alguma questão contacte: Naminhacozinha@gmail.com
