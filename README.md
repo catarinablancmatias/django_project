@@ -55,7 +55,8 @@ django-admin --version
 
 8. Após a instalação correta, antes de aceder ao código do blog deve proceder a mais alguns passos:
   1. Criar o projeto, seguindo este tutorial: https://docs.djangoproject.com/en/2.2/intro/tutorial01/
-  2. Seguir os seguintes tutoriais, fazendo as instalações necessárias e as migrações, consoante o código exposto na documentação suplementar (github) a baixo.
+  2. Seguir os seguintes tutoriais, fazendo as instalações necessárias e as migrações, consoante o código exposto na documentação suplementar (github) a baixo:
+  
     2.1 https://docs.djangoproject.com/en/2.2/intro/tutorial01/
     2.2 https://docs.djangoproject.com/en/2.2/intro/tutorial03/
     2.3 https://docs.djangoproject.com/en/2.2/intro/tutorial04/
@@ -64,10 +65,10 @@ django-admin --version
     2.6 https://docs.djangoproject.com/en/2.2/intro/tutorial07/
 
 Documentação Suplementar:
-Blog: https://github.com/catarinablancmatias/django_project/tree/master/blog
-ADMIN: https://github.com/catarinablancmatias/django_project/blob/master/blog/admin.py
-APPS: https://github.com/catarinablancmatias/django_project/blob/master/blog/apps.py
-MODELS: https://github.com/catarinablancmatias/django_project/blob/master/blog/models.py
-TESTS: https://github.com/catarinablancmatias/django_project/blob/master/blog/tests.py
-URLS: https://github.com/catarinablancmatias/django_project/blob/master/blog/urls.py
-VIEWS: https://github.com/catarinablancmatias/django_project/blob/master/blog/views.py
+*BLOG: https://github.com/catarinablancmatias/django_project/tree/master/blog; 
+*ADMIN: https://github.com/catarinablancmatias/django_project/blob/master/blog/admin.py;
+*APPS: https://github.com/catarinablancmatias/django_project/blob/master/blog/apps.py;
+*MODELS: https://github.com/catarinablancmatias/django_project/blob/master/blog/models.py;
+*TESTS: https://github.com/catarinablancmatias/django_project/blob/master/blog/tests.py;
+*URLS: https://github.com/catarinablancmatias/django_project/blob/master/blog/urls.py;
+*VIEWS: https://github.com/catarinablancmatias/django_project/blob/master/blog/views.py.
