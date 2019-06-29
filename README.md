@@ -59,22 +59,46 @@ Para instalar o pip, deve aceder a https://pip.pypa.io/en/latest/installing/, e 
 
     django-admin --version
 
-8. Após a instalação correta, antes de aceder ao código do blog deve proceder a mais alguns passos:
-  1. Criar o projeto, seguindo este tutorial: https://docs.djangoproject.com/en/2.2/intro/tutorial01/
-  2. Seguir os seguintes tutoriais, fazendo as instalações necessárias e as migrações, consoante o código exposto na documentação suplementar (github) a baixo:
-  
-    2.1 https://docs.djangoproject.com/en/2.2/intro/tutorial01/
-    2.2 https://docs.djangoproject.com/en/2.2/intro/tutorial03/
-    2.3 https://docs.djangoproject.com/en/2.2/intro/tutorial04/
-    2.4 https://docs.djangoproject.com/en/2.2/intro/tutorial06/
-    2.5 https://docs.djangoproject.com/en/2.2/intro/tutorial05/
-    2.6 https://docs.djangoproject.com/en/2.2/intro/tutorial07/
+8. Após a instalação correta, deve criar o projeto, seguindo este tutorial: https://docs.djangoproject.com/en/2.2/intro/tutorial01/.
 
+9. De seguida, instalar o crispy forms acedendo à linha comando e executar:
+    pip install django-crispy-forms
+
+10. Após intalar o tema do form, deve instalar uma coleção de armazenamento personalizado de django, para isso utiliza a linha comando, executando;
+    pip install django-storages
+    
+11. Para aramazenar as imagens contidas no blog, deve instalar uma biblioteca de imagens, para isso execute na linha de comando:
+    pip install Pillow
+        
+12. De seguida, deve verificar o código do manage.py, e na linha de código executar:
+    python manage.py 
+    makemigrations
+    python manage.py migrate
+    
+13. Agora será necessário executar:
+    winpty python (Pacote que permite a comunicação com o Windows)
+    manage.py
+    
+14. Após a comunicação estar estabelecida, utilizamos uma funcionalidade do Django (createsuperuser), que nos permite criar um user que pode aceder ao painel do administrador do site, com conteúdo editável. Para isso, deve verificar se o django.contrib.auth está instalado em settings.py (por defeito, ao instalar a app é automaticamente instalado) e de seguida executar:
+
+    python manage.py createsuperuser
+        Username: (inserir utilizador desejado)
+    Password: (Inserir password desejada)
+    Password (again): (Inserir password desejada novamente)
+    
+    Deve aparecer a seguinte mensagem:
+Superuser created successfully.
+
+15. Agora temos de executar o servidor e ver se está funcional. Para isso, na linha comando execute:
+    python manage.py runserver
+
+16. Se tudo correr bem, vai retornar uma mensagem dizendo que não contém erros.
+
+17. Para aceder ao Painel de administrador, abra uma página WEB e vá para a página admin do seu domínio local, por exemplo: http://127.0.0.1:8000/admin/. 
+
+Esperamos que esta explicação tenha sido perceptível. 
+
+Em caso de dúvida, contacte-nos através de: Naminhacozinha@gmail.com
+  
 Documentação Suplementar:
-  *BLOG: https://github.com/catarinablancmatias/django_project/tree/master/blog; 
-  *ADMIN: https://github.com/catarinablancmatias/django_project/blob/master/blog/admin.py;
-  *APPS: https://github.com/catarinablancmatias/django_project/blob/master/blog/apps.py;
-  *MODELS: https://github.com/catarinablancmatias/django_project/blob/master/blog/models.py;
-  *TESTS: https://github.com/catarinablancmatias/django_project/blob/master/blog/tests.py;
-  *URLS: https://github.com/catarinablancmatias/django_project/blob/master/blog/urls.py;
-  *VIEWS: https://github.com/catarinablancmatias/django_project/blob/master/blog/views.py.
+  Código do BLOG: https://github.com/catarinablancmatias/django_project/tree/master/blog;
