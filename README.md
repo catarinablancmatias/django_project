@@ -85,8 +85,11 @@ Para instalar o pip, deve aceder a https://pip.pypa.io/en/latest/installing/, e 
 14. Após a comunicação estar estabelecida, utilizamos uma funcionalidade do Django (createsuperuser), que nos permite criar um user que pode aceder ao painel do administrador do site, com conteúdo editável. Para isso, deve verificar se o django.contrib.auth está instalado em settings.py (por defeito, ao instalar a app é automaticamente instalado) e de seguida executar:
 
     python manage.py createsuperuser
+    
     Username: (inserir utilizador desejado)
+    
     Password: (Inserir password desejada)
+    
     Password (again): (Inserir password desejada novamente)
     
     Deve aparecer a seguinte mensagem:
